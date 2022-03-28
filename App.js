@@ -1,21 +1,23 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Home from './src/screens/Home';
+import {View, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import MyStack from './navigation';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Home />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <MyStack />
+      </View>
+    </NavigationContainer>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2c3e50',
+    // paddingVertical: 40,
+    // paddingHorizontal: 16,
   },
 });
 
